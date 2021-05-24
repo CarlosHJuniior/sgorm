@@ -1,1 +1,1 @@
-module "sgorm"
+module sgorm
