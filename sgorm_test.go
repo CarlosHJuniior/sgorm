@@ -7,7 +7,7 @@ import (
 )
 
 func TestUnmarshal(t *testing.T) {
-    sf, err := zip.OpenReader("scorm_test.zip")
+    sf, err := zip.OpenReader("C:\\Users\\carlos.hjunior\\Desktop\\ContentPackagingSingleSCO_SCORM20042ndEdition.zip")
     if err != nil {
         panic(err)
     }
