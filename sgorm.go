@@ -5,9 +5,9 @@ import (
     "encoding/xml"
     "errors"
     "fmt"
+    "github.com/CarlosHJuniior/sgorm/entities"
     "io/ioutil"
     "path/filepath"
-    "sgorm/entities"
 )
 
 const (
