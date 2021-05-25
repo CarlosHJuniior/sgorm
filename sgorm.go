@@ -2,7 +2,8 @@ package sgorm
 
 import (
     "encoding/xml"
-    "sgorm/entities"
+    "errors"
+    "github.com/sgorm/entities"
 )
 
 func Unmarshal(b []byte, c *entities.Course) error {
@@ -10,7 +11,7 @@ func Unmarshal(b []byte, c *entities.Course) error {
     
     err := xml.Unmarshal(b, &m)
     if err != nil {
-        return err
+        return errors.New("wrong manifest")
     }
     
     convertObject(m, c)
