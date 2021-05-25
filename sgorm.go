@@ -3,7 +3,7 @@ package sgorm
 import (
     "encoding/xml"
     "errors"
-    "github.com/sgorm/entities"
+    "github.com/CarlosHJuniior/sgorm/entities"
 )
 
 func Unmarshal(b []byte, c *entities.Course) error {
