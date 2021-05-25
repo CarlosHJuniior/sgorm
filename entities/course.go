@@ -1,13 +1,18 @@
 package entities
 
-import "os"
-
 type Course struct {
-    Title string
-    Items []Module
+    ID      string
+    Title   string
+    Modules []Module
 }
 
 type Module struct {
-    Title     string
-    Files []*os.File
+    ID    string
+    Title string
+    Files []ModuleFile
+}
+
+type ModuleFile struct {
+    Name string
+    Data []byte
 }

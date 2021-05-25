@@ -1,3 +1,3 @@
-module github.com/CarlosHJuniior/sgorm
+module sgorm
 
 go 1.16

@@ -18,8 +18,8 @@ type Organization struct {
 type ItemParent struct {
     XMLName    xml.Name `xml:"item"`
     Identifier string   `xml:"identifier,attr"`
-    Title      string `xml:"title"`
-    Items      []Item `xml:"item"`
+    Title      string   `xml:"title"`
+    Items      []Item   `xml:"item"`
 }
 
 type Item struct {
@@ -30,11 +30,11 @@ type Item struct {
 }
 
 type Resource struct {
-    XMLName    xml.Name `xml:"resource"`
-    Identifier string   `xml:"identifier,attr"`
-    Type       string `xml:"type,attr"`
-    Files      []File `xml:"file,omitempty"`
-    Dependency string `xml:"dependency,omitempty"`
+    XMLName      xml.Name     `xml:"resource"`
+    Identifier   string       `xml:"identifier,attr"`
+    Type         string       `xml:"type,attr"`
+    Files        []File       `xml:"file,omitempty"`
+    Dependencies []Dependency `xml:"dependency,omitempty"`
 }
 
 type File struct {
