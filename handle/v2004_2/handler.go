@@ -7,7 +7,6 @@ import (
     "fmt"
     "github.com/CarlosHJuniior/sgorm/handle"
     "io/ioutil"
-    "path/filepath"
 )
 
 const version = "CAM 1.3"
@@ -130,10 +129,8 @@ func (it scormhandler20042) findResources(r Resource) ([]handle.ModuleFile, erro
                     return nil, err
                 }
                 
-                _, name := filepath.Split(zFile.Name)
-                
                 mf := handle.ModuleFile{
-                    Name:   name,
+                    Name:   zFile.Name,
                     Data:   b,
                     IsRoot: r.HRef == rFile.Path,
                 }
