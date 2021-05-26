@@ -7,7 +7,7 @@ import (
 )
 
 func TestUnmarshal(t *testing.T) {
-    sf, err := zip.OpenReader("C:\\Users\\carlos.hjunior\\Desktop\\ContentPackagingSingleSCO_SCORM20042ndEdition.zip")
+    sf, err := zip.OpenReader("test/v1.2.zip")
     if err != nil {
         panic(err)
     }
@@ -24,7 +24,7 @@ func TestUnmarshal(t *testing.T) {
             log.Printf("--%v", m.Title)
             
             for _, f := range m.Files {
-                log.Printf("----%v [%v]", f.Name, len(f.Data))
+                log.Printf("----%v [%v : %v]", f.Name, len(f.Data), f.IsRoot)
             }
         }
     }

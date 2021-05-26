@@ -12,8 +12,8 @@ type Manifest struct {
 type Organization struct {
     XMLName    xml.Name `xml:"organization"`
     Identifier string   `xml:"identifier,attr"`
-    Title string `xml:"title"`
-    Items []Item `xml:"item"`
+    Title      string   `xml:"title"`
+    Items      []Item   `xml:"item"`
 }
 
 type Item struct {
@@ -29,6 +29,7 @@ type Resource struct {
     Type         string       `xml:"type,attr"`
     Files        []File       `xml:"file,omitempty"`
     Dependencies []Dependency `xml:"dependency,omitempty"`
+    HRef         string       `xml:"href,attr"`
 }
 
 type File struct {

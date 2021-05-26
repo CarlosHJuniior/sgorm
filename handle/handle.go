@@ -15,8 +15,9 @@ type Module struct {
 }
 
 type ModuleFile struct {
-    Name string
-    Data []byte
+    Name   string
+    Data   []byte
+    IsRoot bool
 }
 
 type ScormHandle interface {

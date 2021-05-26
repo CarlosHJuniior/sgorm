@@ -27,6 +27,7 @@ type Resource struct {
     XMLName      xml.Name     `xml:"resource"`
     Identifier   string       `xml:"identifier,attr"`
     Type         string       `xml:"type,attr"`
+    HRef         string       `xml:"href,attr"`
     Files        []File       `xml:"file,omitempty"`
     Dependencies []Dependency `xml:"dependency,omitempty"`
 }

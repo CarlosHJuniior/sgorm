@@ -136,8 +136,9 @@ func (it scormhandler20043) findResources(r Resource) ([]handle.ModuleFile, erro
                 _, name := filepath.Split(zFile.Name)
                 
                 mf := handle.ModuleFile{
-                    Name: name,
-                    Data: b,
+                    Name:   name,
+                    Data:   b,
+                    IsRoot: r.HRef == rFile.Path,
                 }
                 
                 list = append(list, mf)
